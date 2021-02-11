@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
+</head>
+<body>
+    <h1>PATTERN</h1>
+    <br>
+    <input type="text" id="input" placeholder="masukkan angka">
+    <br>
+    <input type="button" id="button-ganjil" value="GANJIL">
+    <br>
+    <h3 id="hasil"></h3>
+</body>
+<script>
+
+    let tombolGanjil = document.getElementById("button-ganjil")
+
+    function pattern(number){
+
+        let input = document.getElementById("input").value
+        let print = ""
+        let n = 1
+
+        if(input <=4 && input >0){
+        for(let i=1; i<=input; i++){
+        for(let j=1; j<=i; j++){
+        print += n 
+        n=n+2
+    } 
+    print += "\n"
+    }
+    let h3 = document.getElementById("hasil")
+    h3.innerHTML = print 
+
+    }else{
+        alert("Angka tidak boleh lebih dari 4 dan harus bernilai positif!")
+    }
+} 
+    tombolGanjil.addEventListener("click",pattern)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

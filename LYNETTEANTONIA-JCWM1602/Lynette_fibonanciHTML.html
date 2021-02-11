@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonanci</title>
+</head>
+<body>
+    <h1>Deret Fibonanci</h1>
+    <br>
+    <input type="text" id="input" placeholder="masukkan angka">
+    <br>
+    <br>
+    <input type="button" id="button-show" value="SHOW">
+    <input type="button" id="button-ganjil" value="GANJIL">
+    <input type="button" id="button-genap" value="GENAP">
+    <h2 id="hasil"></h2>
+</body>
+<script>
+
+    let tombolShow = document.getElementById("button-show")
+
+    function fibonanci(number){
+ 
+    let mulai = 0
+    let tambah = 1
+    let x
+    let output = []
+    let input = document.getElementById("input").value
+
+       
+    if(input > 0){
+     output.push(mulai)
+     output.push(tambah)
+   
+     x = mulai + tambah 
+    while(x <= document.getElementById("input").value){
+    output.push(x)
+     
+         mulai = tambah
+         tambah = x
+         x = mulai+tambah
+    }      
+    let h2 = document.getElementById("hasil")
+    h2.innerHTML = output
+}else{
+    alert("Angka harus bernilai positif!")
+}
+}
+tombolShow.addEventListener("click",fibonanci)
+
+
+
+
+</script>
+</html>
